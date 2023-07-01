@@ -131,5 +131,13 @@ namespace CleanArchMvc.Domain.Tests
                 .Throw<CleanArchMvc.Domain.Validation.DomainExceptionValidation>()
                 .WithMessage("Invalid image. Maximum 250 characters");
         }
+
+        [Fact]
+        public void CreateProduct_WithNullImageName_NoNullReferenceException()
+        {
+            Action action = () => new Product(1, "Product Name", "Description", 9.99m, 1, null);
+            action.Should()
+                .NotThrow<NullReferenceException>();
+        }
     }
 }
