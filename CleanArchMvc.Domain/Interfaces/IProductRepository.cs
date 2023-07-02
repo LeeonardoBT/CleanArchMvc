@@ -10,8 +10,8 @@ namespace CleanArchMvc.Domain.Interfaces
         Task<Product> GetProductByIdAsync(int? id);
         Task<Product> GetProductCategoryByIdAsync(int? id);
 
-        Task<Product> CreateAsync(Product category);
-        Task<Product> UpdateAsync(Product category);
-        Task<Product> DeleteAsync(Product category);
+        Task<Product> CreateAsync(Product product);
+        Task<Product> UpdateAsync(Product product);
+        Task<Product> DeleteAsync(Product product);
     }
 }
