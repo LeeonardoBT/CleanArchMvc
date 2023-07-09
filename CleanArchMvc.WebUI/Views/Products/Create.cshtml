@@ -67,6 +67,7 @@
 
             <div class="col-md-10">
                 <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
         </div>
 
