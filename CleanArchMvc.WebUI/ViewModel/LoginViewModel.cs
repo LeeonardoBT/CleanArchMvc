@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CleanArchMvc.WebUI.ViewModels
+namespace CleanArchMvc.WebUI.ViewModel
 {
     public class LoginViewModel
     {
