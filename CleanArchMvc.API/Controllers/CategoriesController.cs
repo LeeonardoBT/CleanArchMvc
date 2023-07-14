@@ -3,7 +3,6 @@ using CleanArchMvc.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace CleanArchMvc.API.Controllers
 {
@@ -57,7 +56,7 @@ namespace CleanArchMvc.API.Controllers
             return new CreatedAtRouteResult("GetCategory", new {id = categoryDTO.Id}, categoryDTO);
         }
 
-        [HttpPut]
+        [HttpPut("{id:int}")]
         public async Task<ActionResult> Put(int id, [FromBody] CategoryDTO categoryDTO)
         {
             if (id != categoryDTO.Id)
