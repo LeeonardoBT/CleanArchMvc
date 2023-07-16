@@ -32,7 +32,7 @@ namespace CleanArchMvc.API.Controllers
             return Ok(products);
         }
 
-        [HttpGet("{id:int}", Name = "Get Product")]
+        [HttpGet("{id:int}", Name = "GetProduct")]
         public async Task<ActionResult<ProductDTO>> Get(int id)
         {
             var product = await _productService.GetProductById(id);
@@ -53,7 +53,7 @@ namespace CleanArchMvc.API.Controllers
                 return BadRequest("Data invalid");
             }
 
-            await _productService.Create(productDTO);
+            await _productService.Add(productDTO);
 
             return new CreatedAtRouteResult("GetProduct", new { id = productDTO.Id }, productDTO);
         }

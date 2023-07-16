@@ -22,7 +22,7 @@ namespace CleanArchMvc.Application.Services
             _mediator = mediator;
         }
 
-        public async Task Create(ProductDTO productDTO)
+        public async Task Add(ProductDTO productDTO)
         {
             var productCreateCommand = _mapper.Map<ProductCreateCommand>(productDTO);
             await _mediator.Send(productCreateCommand);

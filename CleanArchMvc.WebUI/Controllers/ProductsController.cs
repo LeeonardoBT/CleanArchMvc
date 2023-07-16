@@ -42,7 +42,7 @@ namespace CleanArchMvc.WebUI.Controllers
         {
             if (ModelState.IsValid) 
             {
-                await _productService.Create(productDTO);
+                await _productService.Add(productDTO);
                 return RedirectToAction(nameof(Index));
             }
             return View(productDTO);
